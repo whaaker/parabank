@@ -25,7 +25,7 @@ echo =========================================================================
 echo Setup DTP Engine and SOAtest intallation
 SET "JTEST_HOME=C:\Users\whaaker\Downloads\jtest\parasoft_jtest_2020.2.0_win32_x86_64\jtest"
 SET "SOATEST_HOME=C:\Program Files\Parasoft\SOAtest & Virtualize\2020.2"
-SET PARABANK_TOMCAT=
+SET "PARABANK_TOMCAT="
 
 IF "%JTEST_HOME%"=="" (
 	echo JTEST_HOME is not set
@@ -37,4 +37,4 @@ IF "%SOATEST_HOME%"=="" (
 	exit 1;
 )
 
-set PATH=%JTEST_HOME%;%SOATEST_HOME%;C:\Program Files\7-zip;%PATH%
+set "PATH=%JTEST_HOME%;%SOATEST_HOME%;C:\Program Files\7-zip;%PATH%"
