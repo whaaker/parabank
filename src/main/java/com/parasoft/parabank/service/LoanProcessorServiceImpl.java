@@ -25,7 +25,7 @@ public class LoanProcessorServiceImpl implements LoanProcessorService, LoanProce
     @Override
     public LoanResponse requestLoan(final LoanRequest loanRequest) throws ParaBankServiceException {
         final LoanResponse response = getLoanProcessor().requestLoan(loanRequest);
-        response.setLoanProviderName(getLoanProviderName()); // parasoft-suppress BD.EXCEPT.NP "good reason to suppress"
+        response.setLoanProviderName(getLoanProviderName());
         return response;
     }
 
