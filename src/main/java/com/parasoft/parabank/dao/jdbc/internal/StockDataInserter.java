@@ -1,6 +1,5 @@
 package com.parasoft.parabank.dao.jdbc.internal;
 
-import java.security.SecureRandom;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -20,14 +19,13 @@ public class StockDataInserter extends JdbcDaoSupport implements DynamicDataInse
 
     private final SimpleDateFormat dateFormatter;
 
-    private final SecureRandom random;
+    private final Random random;
 
     private JdbcSequenceDao sequenceDao;
 
     public StockDataInserter() {
         dateFormatter = new SimpleDateFormat("yyyy-MM-dd");
-        random = new SecureRandom();
-        random.setSeed(System.currentTimeMillis());
+        random = new Random(System.currentTimeMillis());
     }
 
     /** {@inheritDoc} */

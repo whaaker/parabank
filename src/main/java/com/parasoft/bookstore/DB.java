@@ -62,7 +62,7 @@ public abstract class DB {
                 connection.close();
             }
         } catch (final SQLException e) {
-            log.error(e.getMessage());
+            e.printStackTrace();
         } finally {
             super.finalize();
         }

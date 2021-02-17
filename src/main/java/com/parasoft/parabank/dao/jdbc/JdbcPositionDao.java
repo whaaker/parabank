@@ -113,7 +113,7 @@ public class JdbcPositionDao extends NamedParameterJdbcDaoSupport implements Pos
      */
     @Override
     public List<HistoryPoint> getPositionHistory(final int positionId, final Date startDate, final Date endDate) {
-        final String SQL = "SELECT * FROM Stock WHERE symbol = :symbol " + "AND date BETWEEN :endDate AND :startDate"; // parasoft-suppress PCIDSS32.658.AUSS "demo prep - suppress "
+        final String SQL = "SELECT * FROM Stock WHERE symbol = :symbol " + "AND date BETWEEN :endDate AND :startDate";
 
         final String symbol = getPosition(positionId).getSymbol();
 
