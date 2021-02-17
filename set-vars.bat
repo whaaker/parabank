@@ -23,7 +23,7 @@ echo DTP Project: %DTP_PROJECT% (BUILD_ID:%BUILD_ID%, RUN_TIME:%RUN_TIME%)
 echo =========================================================================
 
 echo Setup DTP Engine and SOAtest intallation
-SET "JTEST_HOME=C:\Users\whaaker\Downloads\jtest\parasoft_jtest_2020.2.0_win32_x86_64\jtest"
+SET "JTEST_HOME=C:\Users\whaaker\Downloads\jtest\parasoft_jtest_2020.1.0_win32_x86_64\jtest"
 SET "SOATEST_HOME=C:\Program Files\Parasoft\SOAtest & Virtualize\2020.2"
 SET "PARABANK_TOMCAT="
 
