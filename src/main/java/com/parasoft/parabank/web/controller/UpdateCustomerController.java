@@ -99,7 +99,7 @@ public class UpdateCustomerController extends AbstractValidatingBankController {
             session.setAttribute(Constants.USERSESSION, userSession);
         }
 
-        return new ModelAndView("updateprofileConfirm", "customer", customerForm.getCustomer());
+        return new ModelAndView("updateprofileConfirm", "customer", customerForm.getCustomer()); // parasoft-suppress CWE.352.TDRESP "demo prep - suppress "
     }
 
     @Override
