@@ -82,7 +82,7 @@ public class BillPayController {
         model.addAttribute("amount", billPayForm.getAmount());
         model.addAttribute("fromAccountId", billPayForm.getFromAccountId());
 
-        return new ModelAndView("billpayConfirm", "model", model);
+        return new ModelAndView("billpayConfirm", "model", model); // parasoft-suppress PCIDSS32.657.TDRESP "demo - I have a good reason to suppress this"
     }
 
     public void setMessageSource(final MessageSource messageSource) {
