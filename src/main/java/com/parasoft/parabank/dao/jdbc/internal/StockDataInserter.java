@@ -1,6 +1,5 @@
 package com.parasoft.parabank.dao.jdbc.internal;
 
-import java.security.SecureRandom;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -20,14 +19,13 @@ public class StockDataInserter extends JdbcDaoSupport implements DynamicDataInse
 
     private final SimpleDateFormat dateFormatter;
 
-    private final SecureRandom random;
+    private final Random random;
 
     private JdbcSequenceDao sequenceDao;
 
     public StockDataInserter() {
         dateFormatter = new SimpleDateFormat("yyyy-MM-dd");
-        random = new SecureRandom();
-        random.setSeed(System.currentTimeMillis());
+        random = new Random(System.currentTimeMillis());
     }
 
     /** {@inheritDoc} */
@@ -94,7 +92,7 @@ public class StockDataInserter extends JdbcDaoSupport implements DynamicDataInse
             final String sql = sb.toString();
             rows = (nextId - lastId) / JdbcSequenceDao.OFFSET;
             totalRows += rows;
-            getJdbcTemplate().update(sql); // parasoft-suppress PCIDSS32.651.TDSQL "demo - I have a good reason to suppress this"
+            getJdbcTemplate().update(sql);
             log.debug("Last {} Stock id = {}, inserted rows/total {}/{}", symbol, nextId, rows, nextId / JdbcSequenceDao.OFFSET);
             lastId = nextId;
             nextId = sequenceDao.setNextId("Stock", nextId); // this will catch up the Sequence
