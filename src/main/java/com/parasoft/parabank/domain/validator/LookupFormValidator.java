@@ -61,7 +61,7 @@ public class LookupFormValidator implements Validator {
     public void validate(final Object obj, final Errors errors) {
 
         if (obj instanceof Customer) {
-            getCustomerValidator().validate(obj, errors); // parasoft-suppress PCIDSS32.657.CDBV "demoprep - I have a good reason to suppress this"
+            getCustomerValidator().validate(obj, errors);
         } else {
             ValidationUtils.rejectIfEmpty(errors, "firstName", "error.first.name.required");
             ValidationUtils.rejectIfEmpty(errors, "lastName", "error.last.name.required");
