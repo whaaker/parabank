@@ -4,13 +4,13 @@
   uses: parasoft/execute-job-action@1.0.3
   with:
     # CTP URL
-    ctpUrl: 
+    ctpUrl: 35.167.69.93
     # CTP Username
-    ctpUsername: 
+    ctpUsername: demo
     # CTP Password
-    ctpPassword: 
+    ctpPassword: demo-user
     # CTP Test Execution Job Name
-    ctpJob: 
+    ctpJob: P1 Smoke Tests
     # Abort the job after timeout exceeded
     abortOnTimeout: # optional
     # Timeout value in minutes
