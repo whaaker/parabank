@@ -28,7 +28,7 @@ jobs:
         uses: parasoft/execute-job-action@1.0.3
         with:
           # CTP URL
-          ctpUrl: 35.167.69.93
+          ctpUrl: http://35.167.69.93
           # CTP Username
           ctpUsername: demo
           # CTP Password
