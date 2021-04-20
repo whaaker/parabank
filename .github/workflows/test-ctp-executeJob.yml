@@ -1,0 +1,33 @@
+- name: Execute Job
+  # You may pin to the exact commit or the version.
+  # uses: parasoft/execute-job-action@c02b0c00163aef3e2099076026ca79cf5bdc26a6
+  uses: parasoft/execute-job-action@1.0.3
+  with:
+    # CTP URL
+    ctpUrl: 
+    # CTP Username
+    ctpUsername: 
+    # CTP Password
+    ctpPassword: 
+    # CTP Test Execution Job Name
+    ctpJob: 
+    # Abort the job after timeout exceeded
+    abortOnTimeout: # optional
+    # Timeout value in minutes
+    timeoutInMinutes: # optional
+    # Publish test execution results to DTP
+    publishReport: # optional
+    # DTP URL
+    dtpUrl: # optional
+    # DTP Username
+    dtpUsername: # optional
+    # DTP Password
+    dtpPassword: # optional
+    # DTP Project Name
+    dtpProject: # optional
+    # Build ID to send to DTP
+    buildId: # optional
+    # Session Tag to send to DTP
+    sessionTag: # optional
+    # Append the test variable set environment name to the session tag
+    appendEnvironment: # optional
